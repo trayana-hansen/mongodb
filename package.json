@@ -1,0 +1,27 @@
+{
+  "name": "mongodb",
+  "version": "1.0.0",
+  "description": "mongodb node setup",
+  "main": "server.js",
+  "scripts": {
+    "test": "mongodb"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trayana-hansen/mongodb.git"
+  },
+  "keywords": [
+    "mongodb"
+  ],
+  "author": "trayana hansen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trayana-hansen/mongodb/issues"
+  },
+  "homepage": "https://github.com/trayana-hansen/mongodb#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongodb": "^5.6.0",
+    "mongoose": "^7.3.0"
+  }
+}
