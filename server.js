@@ -16,7 +16,6 @@ mongoose.connect(
   `mongodb+srv://trayana:admin@cluster0.bmawi0v.mongodb.net/?retryWrites=true&w=majority`,
   {
     useNewUrlParser: true,
-    //useFindAndModify: false,
     useUnifiedTopology: true,
   }
 );

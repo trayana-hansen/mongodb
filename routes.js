@@ -1,25 +1,26 @@
 const express = require("express");
-const artistModel = require("./models");
+const songModel = require("./models");
 const app = express();
 
 // post endpoint
-app.post("/add_artist", async (request, response) => {
-  const artist = new artistModel(request.body);
+app.post("/song", async (request, response) => {
+  //const song = new songModel(request.body);
+  const data = new songModel(request.body);
 
   try {
-    await artist.save();
-    response.send(artist);
+    const result = await data.save();
+    response.json(result);
   } catch (error) {
     response.status(500).send(error);
   }
 });
 
 //get endpoint
-app.get("/artists", async (request, response) => {
-  const artists = await artistModel.find({});
-
+app.get("/song", async (request, response) => {
+  const song = await songModel.find({});
+  console.log(song);
   try {
-    response.send(artists);
+    response.send(song);
   } catch (error) {
     response.status(500).send(error);
   }
